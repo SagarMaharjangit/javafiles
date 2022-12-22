@@ -81,7 +81,7 @@ class WindowEx extends JFrame{
             }
         });
          setVisible(true);
-         setSize(200,200);
+         setSize(200,00);
          setLayout(new FlowLayout());
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

@@ -12,15 +12,20 @@ class MenuExample extends JFrame{
     JMenuBar mb; // to create menu bar
     JMenu m1,m2,m3; //to create main menu
     JMenuItem i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13;//to insert item in menu
+    ImageIcon p;
+    
     
     public void setMenu(){
+        
+        p = new ImageIcon("C:\\Users\\Dell\\Desktop\\new.png");
+        
         mb = new JMenuBar();
         m1 = new JMenu("File");
         m2 = new JMenu("Edt");
         m3 = new JMenu("View");
         
         
-        i1 = new JMenuItem("New");
+        i1 = new JMenuItem("New",p);
         i2 = new JMenuItem("New Window");
         i3 = new JMenuItem("Open");
         i4 = new JMenuItem("Save");
@@ -70,7 +75,7 @@ class MenuExample extends JFrame{
         
         setVisible(true);
         setSize(200,200);
-        setLayout(new FlowLayout(/*FlowLayout.LEFT for menu alignment*/));
+        setLayout(new FlowLayout(FlowLayout.LEFT,25,30/*FlowLayout.LEFT for menu alignment*/));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
