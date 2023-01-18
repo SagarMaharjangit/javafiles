@@ -16,6 +16,14 @@ public class JDBCDemo {
             String password = "";
             conn =  DriverManager.getConnection(url,username,password);
             System.out.println("Connected");
+            
+            Statement st =  conn.createStatement();
+            
+            //query for creating table
+            String tblQuery = "create table tbl_std(id int primary key,name varchar(50),password varchar(50)"
+                    + ",repassword varchar(50), gender varchar(50),course varchar(50))";
+            
+            st.execute(tblQuery);
         }catch(ClassNotFoundException c){
             System.out.println(c);
         }catch(SQLException e){
